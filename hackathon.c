@@ -51,7 +51,20 @@ int main(){
 				if(check!=1){
 					printf("mang hien tai chua co phan tu\n");
 				}else{
-					
+					 int sum = 0;
+					 int count=0;
+		          for(int i = 0; i<a; i++){
+		        for(int j = 1;j<=arr[i]/2;j++){
+				if(arr[i]%j==0){
+					sum+=j;
+				}
+			}
+			if(sum==arr[i]){
+				count++;
+			}
+		}
+		printf("So luong so hoan hao co trong mang la %d \\", count);
+		    
 				}
 				break;
 			case 4:
