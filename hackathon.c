@@ -5,6 +5,7 @@ int main(){
 	int check=-1;
 	int arr[100];
 	int number;
+	int value,index;
 	do{
 		printf("MENU\n");
 		printf("1.Nhap so phan tu va gia tri cua mang\n");
@@ -56,7 +57,21 @@ int main(){
 			case 4:
 				break;
 			case 5:
-				
+	printf("nhap gia tri can them: ");
+    scanf("%d", &value);
+    printf("nhap vao vi tri muon them vao (1-%d): ", a + 1);
+    scanf("%d", &index);
+    while (index < 1 || index > a + 1) {
+        printf("ko co vi tri nay trong mang hay nhap trong khoang (1-%d): ", a + 1);
+        scanf("%d", &index);
+    }
+// chen vao vi tri da nhap
+    for (int i = a; i >= index; i--) {
+        arr[i] =arr[i - 1];
+    }
+    arr[index - 1] = value; // gan gia tri ms nhap vao vi tri can chen
+    a++; // Tang kich thuoc mang
+    // in mang sau khi chen
 				break;
 			case 6:
 				if(check!=1){
